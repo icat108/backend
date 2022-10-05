@@ -25,14 +25,14 @@ import (
 	"gorm.io/gorm"
 	// "github.com/go-playground/validator/v10"
 )
-
 func main() {
-	dsn := "admin:Qje5obRN@tcp(mysql-88986-0.cloudclusters.net:18215)/bwastartup?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "admin:nAzpom5O@tcp(mysql-90228-0.cloudclusters.net:19919)/bwastartup?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+	
 	gin.SetMode(gin.ReleaseMode)
 	userRepository := user.NewRepository(db)
 	campaignRepository := campaign.NewRepository(db)
