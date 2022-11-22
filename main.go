@@ -54,7 +54,7 @@ func main() {
 	sessionWebHandler := webHandler.NewSessionHandler(userService)
 
 	router := gin.Default()
-	// router.Use(cors.Default())
+
 	router.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"*"},
 		AllowMethods:     []string{"*"},
